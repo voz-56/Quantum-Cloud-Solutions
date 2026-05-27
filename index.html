@@ -187,7 +187,7 @@
           <span>customer hires</span>
         </div>
       </div>
-      <div class="review-grid">
+      <div class="review-grid" data-rotating-reviews>
         <article class="review-card">
           <div class="review-stars" aria-label="5 star review">★★★★★</div>
           <p>Lina said Quantum remotely diagnosed her laptop issue, guided the repair process, and got the computer running perfectly again.</p>
@@ -402,5 +402,25 @@
       <a href="mailto:walter@quantumcloudsolutions.net">walter@quantumcloudsolutions.net</a>
     </div>
   </footer>
+  <script>
+    (() => {
+      const grid = document.querySelector("[data-rotating-reviews]");
+      if (!grid) return;
+
+      const cards = Array.from(grid.children);
+      for (let index = cards.length - 1; index > 0; index -= 1) {
+        const swapIndex = Math.floor(Math.random() * (index + 1));
+        [cards[index], cards[swapIndex]] = [cards[swapIndex], cards[index]];
+      }
+      cards.forEach((card) => grid.appendChild(card));
+
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+      window.setInterval(() => {
+        if (document.hidden || grid.children.length < 2) return;
+        grid.appendChild(grid.firstElementChild);
+      }, 12000);
+    })();
+  </script>
 </body>
 </html>
