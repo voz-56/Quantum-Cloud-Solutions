@@ -335,6 +335,10 @@ h1 {
   gap: 12px;
 }
 
+.trust-grid {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
 .trust-grid span,
 .integration-grid span {
   min-height: 70px;
@@ -348,6 +352,12 @@ h1 {
   box-shadow: 0 12px 30px rgba(8, 17, 31, 0.05);
   text-align: center;
   font-weight: 850;
+}
+
+.trust-grid span {
+  min-height: 68px;
+  padding: 10px;
+  font-size: 15px;
 }
 
 .outcomes,
@@ -915,7 +925,11 @@ h3 {
 .bio-timeline,
 .bio-credentials,
 .bio-skills,
-.bio-cta {
+.bio-cta,
+.portal-hero,
+.portal-actions,
+.remote-support,
+.portal-safety {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
 }
@@ -927,6 +941,54 @@ h3 {
   gap: clamp(30px, 6vw, 70px);
   align-items: center;
   padding: clamp(58px, 8vw, 96px) 0;
+}
+
+.portal-hero {
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.55fr);
+  gap: clamp(30px, 6vw, 70px);
+  align-items: center;
+  padding: clamp(58px, 8vw, 96px) 0;
+}
+
+.portal-copy h1 {
+  color: var(--ink);
+  font-size: clamp(48px, 8vw, 88px);
+}
+
+.portal-copy p {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: clamp(18px, 2vw, 23px);
+}
+
+.portal-status {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: clamp(24px, 4vw, 36px);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.portal-status span {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.portal-status strong {
+  display: block;
+  margin: 12px 0;
+  color: var(--ink);
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.05;
+}
+
+.portal-status p {
+  margin-bottom: 0;
+  color: var(--muted);
 }
 
 .bio-hero h1 {
@@ -989,8 +1051,102 @@ h3 {
 .bio-timeline,
 .bio-credentials,
 .bio-skills,
-.bio-cta {
+.bio-cta,
+.portal-actions,
+.remote-support,
+.portal-safety {
   padding: clamp(58px, 8vw, 96px) 0;
+}
+
+.portal-actions,
+.portal-safety {
+  border-top: 1px solid var(--line);
+}
+
+.portal-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.portal-card {
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px;
+  background: var(--white);
+  box-shadow: 0 16px 38px rgba(8, 17, 31, 0.06);
+}
+
+.portal-card > span {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.portal-card p {
+  color: var(--muted);
+}
+
+.portal-card a {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: var(--blue);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.remote-support {
+  display: grid;
+  grid-template-columns: minmax(0, 0.7fr) minmax(300px, 0.55fr);
+  gap: clamp(26px, 5vw, 60px);
+  align-items: start;
+}
+
+.remote-copy p,
+.remote-download p {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.remote-steps {
+  display: grid;
+  gap: 12px;
+}
+
+.remote-steps article,
+.remote-download {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 20px;
+  background: var(--white);
+  box-shadow: 0 16px 38px rgba(8, 17, 31, 0.06);
+}
+
+.remote-steps span {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.remote-steps p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.remote-download {
+  grid-column: 1 / -1;
 }
 
 .bio-intro {
@@ -1168,7 +1324,9 @@ h3 {
   .founder,
   .bio-hero,
   .bio-intro,
-  .bio-cta {
+  .bio-cta,
+  .portal-hero,
+  .remote-support {
     grid-template-columns: 1fr;
   }
 
@@ -1192,7 +1350,8 @@ h3 {
   .review-grid,
   .bio-card-grid,
   .credential-grid,
-  .logo-cloud {
+  .logo-cloud,
+  .portal-card-grid {
     grid-template-columns: 1fr;
   }
 
