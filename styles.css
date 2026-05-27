@@ -12,6 +12,7 @@
   --line: rgba(8, 17, 31, 0.12);
   --line-light: rgba(255, 255, 255, 0.18);
   --shadow: 0 24px 70px rgba(8, 17, 31, 0.18);
+  --header-height: 74px;
 }
 
 * {
@@ -20,7 +21,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 96px;
+  scroll-padding-top: calc(var(--header-height) + 22px);
   overflow-x: hidden;
 }
 
@@ -28,6 +29,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   margin: 0;
+  padding-top: var(--header-height);
   font-family: Inter, Arial, Helvetica, sans-serif;
   color: var(--ink);
   background: var(--paper);
@@ -50,8 +52,10 @@ p {
 }
 
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   background: rgba(8, 17, 31, 0.86);
@@ -164,7 +168,7 @@ p {
 
 .hero-inner {
   width: min(1180px, calc(100% - 32px));
-  min-height: calc(100vh - 74px);
+  min-height: calc(100vh - var(--header-height));
   margin: 0 auto;
   padding: clamp(54px, 8vw, 94px) 0 38px;
   display: grid;
@@ -1333,6 +1337,10 @@ h3 {
 }
 
 @media (max-width: 1180px) {
+  :root {
+    --header-height: 178px;
+  }
+
   .nav {
     grid-template-columns: 1fr auto;
     padding: 14px 0;
@@ -1422,6 +1430,10 @@ h3 {
 }
 
 @media (max-width: 640px) {
+  :root {
+    --header-height: 252px;
+  }
+
   .nav {
     grid-template-columns: 1fr;
   }
