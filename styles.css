@@ -45,6 +45,14 @@ body {
   background-attachment: fixed;
 }
 
+.portal-page {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(240, 248, 252, 0.94) 42%, rgba(246, 250, 252, 1)),
+    radial-gradient(circle at 84% 8%, rgba(22, 200, 243, 0.18), transparent 34%),
+    radial-gradient(circle at 12% 22%, rgba(100, 227, 161, 0.12), transparent 28%),
+    #f6fafc;
+}
+
 a {
   color: inherit;
 }
@@ -1022,21 +1030,25 @@ h3 {
 
 .portal-copy h1 {
   color: var(--ink);
-  font-size: clamp(48px, 8vw, 88px);
+  font-size: clamp(42px, 6.5vw, 74px);
+  font-weight: 850;
+  line-height: 1.04;
 }
 
 .portal-copy p {
   max-width: 720px;
   color: var(--muted);
-  font-size: clamp(18px, 2vw, 23px);
+  font-size: clamp(17px, 1.65vw, 20px);
+  line-height: 1.65;
 }
 
 .portal-status {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: clamp(24px, 4vw, 36px);
-  background: var(--white);
-  box-shadow: var(--shadow);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 22px 58px rgba(8, 17, 31, 0.12);
+  backdrop-filter: blur(10px);
 }
 
 .portal-status span {
@@ -1050,7 +1062,7 @@ h3 {
   display: block;
   margin: 12px 0;
   color: var(--ink);
-  font-size: clamp(30px, 4vw, 46px);
+  font-size: clamp(28px, 3.4vw, 40px);
   line-height: 1.05;
 }
 
@@ -1144,8 +1156,8 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 24px;
-  background: var(--white);
-  box-shadow: 0 16px 38px rgba(8, 17, 31, 0.06);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 16px 38px rgba(8, 17, 31, 0.08);
 }
 
 .portal-card > span {
@@ -1197,8 +1209,8 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 20px;
-  background: var(--white);
-  box-shadow: 0 16px 38px rgba(8, 17, 31, 0.06);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 16px 38px rgba(8, 17, 31, 0.08);
 }
 
 .remote-steps span {
