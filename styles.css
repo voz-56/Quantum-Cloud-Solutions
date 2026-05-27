@@ -1161,6 +1161,21 @@ h3 {
   grid-column: 1 / -1;
 }
 
+.download-actions,
+.remote-call-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.download-actions {
+  margin-top: 22px;
+}
+
+.remote-call-actions {
+  margin-top: 12px;
+}
+
 .bio-intro {
   display: grid;
   grid-template-columns: minmax(280px, 0.75fr) minmax(0, 1fr);
