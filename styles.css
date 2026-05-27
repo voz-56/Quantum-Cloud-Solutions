@@ -1229,8 +1229,7 @@ h3 {
   grid-column: 1 / -1;
 }
 
-.download-actions,
-.remote-call-actions {
+.download-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -1240,8 +1239,12 @@ h3 {
   margin-top: 22px;
 }
 
-.remote-call-actions {
-  margin-top: 12px;
+.download-actions .button-link {
+  width: auto;
+  min-width: 108px;
+  color: var(--ink);
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--cyan), var(--lime));
 }
 
 .bio-intro {
