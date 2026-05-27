@@ -36,6 +36,15 @@ body {
   line-height: 1.55;
 }
 
+.home-page {
+  background:
+    linear-gradient(110deg, rgba(12, 26, 48, 0.96), rgba(12, 26, 48, 0.78)),
+    radial-gradient(circle at 86% 12%, rgba(22, 200, 243, 0.24), transparent 34%),
+    radial-gradient(circle at 8% 42%, rgba(100, 227, 161, 0.12), transparent 30%),
+    linear-gradient(135deg, #07111f 0%, #123f61 52%, #0f6c88 100%);
+  background-attachment: fixed;
+}
+
 a {
   color: inherit;
 }
@@ -405,11 +414,23 @@ h2 {
   letter-spacing: 0;
 }
 
+.home-page h2 {
+  color: var(--white);
+}
+
 .section-heading p,
 .difference-copy p,
 .platform-copy p {
   color: var(--muted);
   font-size: 18px;
+}
+
+.home-page .trust-band p,
+.home-page .section-heading p,
+.home-page .difference-copy p,
+.home-page .platform-copy p,
+.home-page .founder-copy p {
+  color: rgba(255, 255, 255, 0.76);
 }
 
 .outcome-grid {
@@ -551,13 +572,19 @@ h3 {
 }
 
 .solutions {
-  background: var(--paper);
+  background: transparent;
 }
 
 .reviews {
   border-top: 1px solid var(--line);
   scroll-margin-top: 96px;
   padding-top: clamp(46px, 6vw, 72px);
+}
+
+.home-page .reviews,
+.home-page .founder,
+.home-page .resources {
+  border-top-color: rgba(255, 255, 255, 0.18);
 }
 
 .reviews .section-heading {
