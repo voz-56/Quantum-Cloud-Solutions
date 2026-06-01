@@ -31,8 +31,13 @@ body {
   margin: 0;
   padding-top: var(--header-height);
   font-family: Inter, Arial, Helvetica, sans-serif;
-  color: var(--ink);
-  background: var(--paper);
+  color: var(--white);
+  background:
+    linear-gradient(110deg, rgba(12, 26, 48, 0.96), rgba(12, 26, 48, 0.78)),
+    radial-gradient(circle at 86% 12%, rgba(22, 200, 243, 0.24), transparent 34%),
+    radial-gradient(circle at 8% 42%, rgba(100, 227, 161, 0.12), transparent 30%),
+    linear-gradient(135deg, #07111f 0%, #123f61 52%, #0f6c88 100%);
+  background-attachment: fixed;
   line-height: 1.55;
 }
 
@@ -47,10 +52,11 @@ body {
 
 .portal-page {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(240, 248, 252, 0.94) 42%, rgba(246, 250, 252, 1)),
-    radial-gradient(circle at 84% 8%, rgba(22, 200, 243, 0.18), transparent 34%),
-    radial-gradient(circle at 12% 22%, rgba(100, 227, 161, 0.12), transparent 28%),
-    #f6fafc;
+    linear-gradient(110deg, rgba(12, 26, 48, 0.96), rgba(12, 26, 48, 0.78)),
+    radial-gradient(circle at 86% 12%, rgba(22, 200, 243, 0.24), transparent 34%),
+    radial-gradient(circle at 8% 42%, rgba(100, 227, 161, 0.12), transparent 30%),
+    linear-gradient(135deg, #07111f 0%, #123f61 52%, #0f6c88 100%);
+  background-attachment: fixed;
 }
 
 a {
@@ -1372,6 +1378,98 @@ h3 {
   justify-content: center;
   padding: 12px 14px;
   text-align: center;
+}
+
+body:not(.home-page) h2,
+.doc-hero h1,
+.portal-copy h1,
+.bio-hero h1 {
+  color: var(--white);
+}
+
+body:not(.home-page) .section-heading p,
+.portal-copy p,
+.remote-copy p,
+.remote-download p,
+.bio-hero-copy p,
+.bio-copy p,
+.portal-safety p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+body:not(.home-page) .doc-shell,
+body:not(.home-page) .portal-status,
+body:not(.home-page) .portal-card,
+body:not(.home-page) .remote-steps article,
+body:not(.home-page) .remote-download,
+body:not(.home-page) .bio-stat-panel article,
+body:not(.home-page) .bio-card-grid article,
+body:not(.home-page) .credential-grid article,
+body:not(.home-page) .timeline-list article,
+body:not(.home-page) .logo-tile,
+body:not(.home-page) .capability-badge {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(14px);
+}
+
+body:not(.home-page) .doc-meta,
+body:not(.home-page) .doc-shell p,
+body:not(.home-page) .doc-shell li,
+body:not(.home-page) .portal-status p,
+body:not(.home-page) .portal-card p,
+body:not(.home-page) .remote-steps p,
+body:not(.home-page) .bio-stat-panel span,
+body:not(.home-page) .bio-card-grid p,
+body:not(.home-page) .timeline-list p,
+body:not(.home-page) .credential-grid li,
+body:not(.home-page) .logo-tile small {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+body:not(.home-page) .doc-shell h2,
+body:not(.home-page) .portal-status span,
+body:not(.home-page) .portal-card > span,
+body:not(.home-page) .remote-steps span,
+body:not(.home-page) .bio-stat-panel strong,
+body:not(.home-page) .timeline-list span {
+  color: var(--cyan);
+}
+
+body:not(.home-page) .portal-status strong,
+body:not(.home-page) h3,
+body:not(.home-page) .logo-tile,
+body:not(.home-page) .capability-badge {
+  color: var(--white);
+}
+
+body:not(.home-page) .portal-card a {
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--ink);
+  background: linear-gradient(135deg, var(--cyan), var(--lime));
+}
+
+body:not(.home-page) .bio-intro,
+body:not(.home-page) .bio-timeline,
+body:not(.home-page) .bio-skills,
+body:not(.home-page) .portal-actions,
+body:not(.home-page) .portal-safety {
+  border-top-color: rgba(255, 255, 255, 0.18);
+}
+
+body:not(.home-page) .bio-hero .button-link {
+  color: var(--white);
+  border-color: rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+body:not(.home-page) .bio-hero .button-link.primary,
+body:not(.home-page) .bio-cta .button-link.primary {
+  color: var(--ink);
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--cyan), var(--lime));
 }
 
 .bio-cta {
