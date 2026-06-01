@@ -768,19 +768,23 @@ h3 {
 }
 
 .platform-points span {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
   padding: 14px 16px;
-  background: var(--white);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.12);
   font-weight: 900;
 }
 
 .service-panel {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 8px;
   padding: clamp(22px, 4vw, 34px);
-  background: var(--white);
-  box-shadow: var(--shadow);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 22px 58px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(14px);
 }
 
 .service-panel-header {
@@ -788,14 +792,14 @@ h3 {
   justify-content: space-between;
   gap: 16px;
   margin-bottom: 18px;
-  color: var(--muted);
+  color: rgba(255, 255, 255, 0.7);
   font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
 }
 
 .service-panel-header strong {
-  color: var(--blue);
+  color: var(--cyan);
 }
 
 .service-panel-grid {
@@ -808,11 +812,11 @@ h3 {
   min-height: 82px;
   display: flex;
   align-items: center;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 8px;
   padding: 14px;
-  color: #26384b;
-  background: #f7fbff;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.07);
   font-weight: 900;
 }
 
