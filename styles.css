@@ -1671,3 +1671,65 @@ body:not(.home-page) .bio-cta .button-link.primary {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* Unified dark card treatment for the main page. */
+.home-page .trust-grid span,
+.home-page .outcome-card,
+.home-page .difference-list article,
+.home-page .review-summary div,
+.home-page .review-card,
+.home-page .solution-item,
+.home-page .resource-card,
+.home-page .platform-points span,
+.home-page .service-panel,
+.home-page .service-panel-grid span,
+.home-page .review-link,
+.home-page .solution-item a {
+  border-color: rgba(255, 255, 255, 0.18);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(14px);
+}
+
+.home-page .outcome-card span,
+.home-page .resource-card span,
+.home-page .review-summary strong,
+.home-page .service-panel-header strong,
+.home-page .solution-item a {
+  color: var(--cyan);
+}
+
+.home-page .trust-grid span,
+.home-page .outcome-card h3,
+.home-page .difference-list h3,
+.home-page .review-card strong,
+.home-page .solution-item h3,
+.home-page .resource-card h3,
+.home-page .service-panel-grid span {
+  color: var(--white);
+}
+
+.home-page .outcome-card p,
+.home-page .difference-list p,
+.home-page .review-card p,
+.home-page .review-card span,
+.home-page .review-summary span,
+.home-page .solution-item p,
+.home-page .resource-card p,
+.home-page .service-panel-header {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.home-page .review-card footer {
+  border-top-color: rgba(255, 255, 255, 0.16);
+}
+
+.home-page .solution-number,
+.home-page .solution-item:nth-child(2) .solution-number,
+.home-page .solution-item:nth-child(3) .solution-number,
+.home-page .solution-item:nth-child(4) .solution-number,
+.home-page .solution-item:nth-child(5) .solution-number {
+  color: var(--ink);
+  background: linear-gradient(135deg, var(--cyan), var(--lime));
+}
