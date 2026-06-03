@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Quantum Cloud Solutions customer portal for remote support, service requests, payments, and secure next steps.">
-  <link rel="stylesheet" href="styles.css?v=20260601c">
+  <link rel="stylesheet" href="styles.css?v=20260602a">
 </head>
 <body class="portal-page">
   <header class="site-header">
@@ -66,8 +66,8 @@
         <article class="portal-card">
           <span>03</span>
           <h3>Payments</h3>
-          <p>Quantum accepts Apple Pay, Cash, Google Pay, and Zelle. Payment details are confirmed directly during service.</p>
-          <a href="tel:13056320381">Confirm Payment</a>
+          <p>Quantum accepts Cash App, Zelle, and secure card payments by Stripe link. Confirm the amount directly before sending payment.</p>
+          <a href="#payments">Payment Options</a>
         </article>
       </div>
     </section>
@@ -101,6 +101,34 @@
           <a class="button-link primary" href="https://github.com/rustdesk/rustdesk/releases/download/1.4.6/rustdesk-1.4.6-x86_64.dmg">Mac Intel</a>
           <a class="button-link primary" href="tel:13056320381">Call Before Starting</a>
         </div>
+      </div>
+    </section>
+
+    <section id="payments" class="payment-section" aria-labelledby="payments-title">
+      <div class="section-heading wide">
+        <div class="section-kicker">Payments</div>
+        <h2 id="payments-title">Simple ways to pay Quantum.</h2>
+        <p>Confirm the service amount with Walter before sending payment. Card payments are handled through a secure Stripe link when requested.</p>
+      </div>
+      <div class="payment-grid">
+        <article class="payment-card">
+          <span>Cash App</span>
+          <strong>$VoZ74</strong>
+          <p>Use Cash App for quick service payments after the amount is confirmed.</p>
+          <a class="button-link primary" href="https://cash.app/$VoZ74" target="_blank" rel="noopener">Open Cash App</a>
+        </article>
+        <article class="payment-card">
+          <span>Zelle</span>
+          <strong>305 632 0381</strong>
+          <p>Send Zelle payments to Quantum using Walter's phone number after confirming the total.</p>
+          <a class="button-link primary" href="tel:13056320381">Confirm by Phone</a>
+        </article>
+        <article class="payment-card">
+          <span>Stripe</span>
+          <strong>Secure card link</strong>
+          <p>Use Stripe for debit or credit card payments. Quantum can send a secure checkout link for the service amount.</p>
+          <a class="button-link primary" href="mailto:walter@quantumcloudsolutions.net?subject=Stripe%20payment%20link%20request">Request Stripe Link</a>
+        </article>
       </div>
     </section>
 

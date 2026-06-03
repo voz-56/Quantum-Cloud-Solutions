@@ -1015,6 +1015,7 @@ h3 {
 .portal-hero,
 .portal-actions,
 .remote-support,
+.payment-section,
 .portal-safety {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
@@ -1144,11 +1145,13 @@ h3 {
 .bio-cta,
 .portal-actions,
 .remote-support,
+.payment-section,
 .portal-safety {
   padding: clamp(58px, 8vw, 96px) 0;
 }
 
 .portal-actions,
+.payment-section,
 .portal-safety {
   border-top: 1px solid var(--line);
 }
@@ -1255,6 +1258,48 @@ h3 {
   color: var(--ink);
   border-color: transparent;
   background: linear-gradient(135deg, var(--cyan), var(--lime));
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.payment-card {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  padding: 24px;
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(14px);
+}
+
+.payment-card span {
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.payment-card strong {
+  display: block;
+  margin: 14px 0 12px;
+  color: var(--white);
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.05;
+}
+
+.payment-card p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.payment-card .button-link {
+  margin-top: auto;
 }
 
 .bio-intro {
@@ -1568,7 +1613,8 @@ body:not(.home-page) .bio-cta .button-link.primary {
   .bio-card-grid,
   .credential-grid,
   .logo-cloud,
-  .portal-card-grid {
+  .portal-card-grid,
+  .payment-grid {
     grid-template-columns: 1fr;
   }
 
