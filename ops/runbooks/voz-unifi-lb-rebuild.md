@@ -213,3 +213,25 @@ for U in 3478 10003; do
 4. UniFi-OS-Server vs Traefik **:443 binding** resolution — §4b.
 5. `voz-unifi-lb` **new public IP** → drives the §5b DNS change.
 6. Is the 4th device confirmed as **UAP-AC-Lite**? (inventory: UGW3 + USW-Lite-8 + UAP-AC-Pro + UAP-AC-Lite = 4 ✓)
+
+---
+
+## 9. Session log — current state (2026-06-27)
+
+**Where we are:** planning complete · **NOTHING provisioned · $0 · all gates intact.**
+
+**Done this session**
+- Corrected the dispatched task against the vault (see §0): real 4-device inventory; devices live on `.201` (not `.200`); edge-LB→AWS confirmed (founder), overriding North-Star → promotes **O27**, revives **O14**.
+- Sizing confirmed: `medium_3_0` ($24 / 4 GB) adequate vs UniFi-OS-Server reqs (Ubuntu 24.04 ✓, **Podman not Docker**, 4 GB = recommended floor; `large_3_0` flagged as edge-headroom option).
+- Authored this runbook → branch `claude/unifi-lightsail-rebuild-fzmdri`, **PR #1**.
+
+**Blocker (why nothing executed)**
+- Execution session is GitHub-repo-scoped. AWS creds in-env are **agent-proxy placeholders** (`prox…`, `InvalidClientTokenId`) — STS verify-gate caught them before any destructive call. No `boto3` reachability, **no LAN/SSH** to `.201` / `192.168.1.x`. → none of Steps 1–3 runnable from here.
+
+**Next to unblock**
+- AWS plane (§2/§4): real `voz-lightsail-provisioner` creds in a **fresh session** → STS-verify → execute teardown + provision.
+- Device cutover (§5a) + DNS (§5b): **fleet-side executor** / founder DNS action — a cloud session can't reach the LAN.
+
+**Top open risks:** provisioner-key `DeleteInstance`/`ReleaseStaticIp` scope unverified (§1); on-prem→cloud device **inform/adoption path** (§5a); Traefik-vs-UniFi `:443` binding (§4b).
+
+**Vault cards touched:** O26, O13, O14 (revived), O15, O27.
